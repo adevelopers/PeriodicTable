@@ -38,70 +38,25 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="8RY-ap-ejg">
-                                <rect key="frame" x="0.0" y="150.5" width="375" height="200"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="CCE-Lf-N8c">
-                                        <rect key="frame" x="0.0" y="0.0" width="219" height="100"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minzurki" translatesAutoresizingMaskIntoConstraints="NO" id="VVo-rj-onD">
-                                                <rect key="frame" x="0.0" y="0.0" width="119" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="119" id="F1m-ub-NKc"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="customLogo" translatesAutoresizingMaskIntoConstraints="NO" id="QW3-wI-4wc">
-                                                <rect key="frame" x="119" y="0.0" width="100" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="dTQ-u6-eAd"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="J1t-cb-itS"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qd4-X7-RAP">
-                                        <rect key="frame" x="0.0" y="100" width="200" height="100"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="customLogo" translatesAutoresizingMaskIntoConstraints="NO" id="yRe-TM-MkR">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="K2A-xg-HhH"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product_image" translatesAutoresizingMaskIntoConstraints="NO" id="HXY-Qf-BIu">
-                                                <rect key="frame" x="100" y="0.0" width="100" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="D0q-hw-iwW"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="RFg-gB-sbi"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqT-dv-iPW">
+                                <rect key="frame" x="129" y="509" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send notification"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8RY-ap-ejg" firstAttribute="top" secondItem="Z6e-CY-BMf" secondAttribute="bottom" constant="53" id="BUd-MW-eu9"/>
                             <constraint firstItem="Z6e-CY-BMf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IoM-ft-baq"/>
-                            <constraint firstItem="8RY-ap-ejg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X9G-0h-fW0"/>
-                            <constraint firstAttribute="trailing" secondItem="8RY-ap-ejg" secondAttribute="trailing" id="bTW-28-0VX"/>
                             <constraint firstItem="Z6e-CY-BMf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="k17-ib-lYO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonSend" destination="aqT-dv-iPW" id="5N5-IV-vQn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="customLogo" width="256" height="256"/>
-        <image name="minzurki" width="607" height="640"/>
-        <image name="product_image" width="582" height="561"/>
-    </resources>
 </document>

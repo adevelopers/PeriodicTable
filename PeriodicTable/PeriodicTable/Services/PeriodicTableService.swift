@@ -10,9 +10,10 @@ import Foundation
 
 class PeriodicTableService {
     
-    class func getElements() -> [ElementTableModel] {
+    fileprivate func getElements() -> [ElementTableModel] {
         
         var models = [ElementTableModel]()
+        
         let elements = [
             ("H","Hydrogen",1),
             ("He","Helium",2),
@@ -29,6 +30,10 @@ class PeriodicTableService {
         }
         
         return models
+    }
+    
+    func getPeriodicTable() -> PeriodicTableModel {
+        return PeriodicTableModel(elements: getElements())
     }
     
 }

@@ -33,13 +33,24 @@ class PeriodicTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        view.backgroundColor = .black
+        var frameForGradient = view.frame
+        frameForGradient.origin.y = -20
+        let gradient = RadialGradientView(frame: frameForGradient)
+        gradient.alpha = 0.8
+        view.addSubview(gradient)
+        
         model = PeriodicTableService().getPeriodicTable()
         
         tableView = UITableView(frame: view.frame)
         tableView.dataSource = self
+        tableView.backgroundColor = .clear
+
         view.addSubview(tableView)
     }
+    
+    
 
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		717063651F81365E00779A08 /* ElementTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717063641F81365E00779A08 /* ElementTableModel.swift */; };
 		71BBF2D11F71B232003C52CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBF2D01F71B232003C52CF /* AppDelegate.swift */; };
 		71BBF2D31F71B232003C52CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBF2D21F71B232003C52CF /* ViewController.swift */; };
 		71BBF2D61F71B232003C52CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BBF2D41F71B232003C52CF /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		717063641F81365E00779A08 /* ElementTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementTableModel.swift; path = Models/ElementTableModel.swift; sourceTree = "<group>"; };
 		71BBF2CD1F71B232003C52CF /* PeriodicTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeriodicTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BBF2D01F71B232003C52CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71BBF2D21F71B232003C52CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		717063611F8135B500779A08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				717063641F81365E00779A08 /* ElementTableModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		71BBF2C41F71B232003C52CF = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		71BBF2CF1F71B232003C52CF /* PeriodicTable */ = {
 			isa = PBXGroup;
 			children = (
+				717063611F8135B500779A08 /* Models */,
 				71BBF2D01F71B232003C52CF /* AppDelegate.swift */,
 				71BBF2D21F71B232003C52CF /* ViewController.swift */,
 				71BBF2D41F71B232003C52CF /* Main.storyboard */,
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71BBF2D31F71B232003C52CF /* ViewController.swift in Sources */,
+				717063651F81365E00779A08 /* ElementTableModel.swift in Sources */,
 				71BBF2D11F71B232003C52CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +316,7 @@
 				71BBF2E11F71B232003C52CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

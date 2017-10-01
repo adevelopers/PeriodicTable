@@ -15,4 +15,10 @@ class ElementTableModel {
     var name: String?
     var number: Int?            // номер
     
+    init(symbol: String, name: String, number: Int) {
+        self.symbol = symbol
+        self.name = name
+        self.number = number
+    }
+    
 }

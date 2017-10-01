@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		717063631F8135EE00779A08 /* PeriodicTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717063621F8135EE00779A08 /* PeriodicTableModel.swift */; };
 		717063651F81365E00779A08 /* ElementTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717063641F81365E00779A08 /* ElementTableModel.swift */; };
+		717063681F813FC500779A08 /* PeriodicTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717063671F813FC500779A08 /* PeriodicTableService.swift */; };
 		71BBF2D11F71B232003C52CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBF2D01F71B232003C52CF /* AppDelegate.swift */; };
 		71BBF2D31F71B232003C52CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBF2D21F71B232003C52CF /* ViewController.swift */; };
 		71BBF2D61F71B232003C52CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BBF2D41F71B232003C52CF /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		717063621F8135EE00779A08 /* PeriodicTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeriodicTableModel.swift; path = Models/PeriodicTableModel.swift; sourceTree = "<group>"; };
 		717063641F81365E00779A08 /* ElementTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementTableModel.swift; path = Models/ElementTableModel.swift; sourceTree = "<group>"; };
+		717063671F813FC500779A08 /* PeriodicTableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeriodicTableService.swift; path = Services/PeriodicTableService.swift; sourceTree = "<group>"; };
 		71BBF2CD1F71B232003C52CF /* PeriodicTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeriodicTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BBF2D01F71B232003C52CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71BBF2D21F71B232003C52CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +50,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		717063661F813FA600779A08 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				717063671F813FC500779A08 /* PeriodicTableService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		71BBF2C41F71B232003C52CF = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +77,7 @@
 		71BBF2CF1F71B232003C52CF /* PeriodicTable */ = {
 			isa = PBXGroup;
 			children = (
+				717063661F813FA600779A08 /* Services */,
 				717063611F8135B500779A08 /* Models */,
 				71BBF2D01F71B232003C52CF /* AppDelegate.swift */,
 				71BBF2D21F71B232003C52CF /* ViewController.swift */,
@@ -153,6 +164,7 @@
 			files = (
 				71BBF2D31F71B232003C52CF /* ViewController.swift in Sources */,
 				717063651F81365E00779A08 /* ElementTableModel.swift in Sources */,
+				717063681F813FC500779A08 /* PeriodicTableService.swift in Sources */,
 				71BBF2D11F71B232003C52CF /* AppDelegate.swift in Sources */,
 				717063631F8135EE00779A08 /* PeriodicTableModel.swift in Sources */,
 			);

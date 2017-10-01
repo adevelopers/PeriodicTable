@@ -52,6 +52,9 @@ extension PeriodicTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "defaultCell")
         cell.textLabel?.text = model.elements[indexPath.row].name ?? ""
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.alpha = 0.5
+        cell.backgroundColor = .clear
         return cell
     }
     

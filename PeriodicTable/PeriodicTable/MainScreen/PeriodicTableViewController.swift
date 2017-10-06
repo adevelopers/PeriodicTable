@@ -24,17 +24,29 @@ class PeriodicTableViewController: UIViewController {
         gradient.alpha = 0.8
         view.addSubview(gradient)
         
+        
+        configureTableView()
+        
+    }
+    
+}
+
+extension PeriodicTableViewController {
+ 
+    func configureTableView() {
         model = PeriodicTableService().getPeriodicTable()
         
-        tableView = UITableView(frame: view.frame)
+        let offset = (navigationController?.navigationBar.intrinsicContentSize.height ?? 0)  + UIApplication.shared.statusBarFrame.height
+        
+        let frameTableView = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - offset)
+        tableView = UITableView(frame: frameTableView)
         tableView.dataSource = self
         tableView.backgroundColor = .clear
-
+        tableView.center.y += offset
+        
         view.addSubview(tableView)
     }
     
-    
-
 }
 
 extension PeriodicTableViewController: UITableViewDataSource {

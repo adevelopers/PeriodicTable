@@ -41,6 +41,7 @@ extension PeriodicTableViewController {
         let frameTableView = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - offset)
         tableView = UITableView(frame: frameTableView)
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.backgroundColor = .clear
         tableView.center.y += offset
         
@@ -64,4 +65,15 @@ extension PeriodicTableViewController: UITableViewDataSource {
         return cell
     }
     
+}
+
+extension PeriodicTableViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+ 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("tap on element \(model.elements[indexPath.row].symbol ?? "")")
+    }
 }

@@ -58,16 +58,17 @@ extension PeriodicTableViewController {
 
 extension PeriodicTableViewController: UITableViewDataSource {
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.elements.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "defaultCell")
-        cell.textLabel?.text = model.elements[indexPath.row].name ?? ""
-        cell.textLabel?.textColor = .white
-        cell.textLabel?.alpha = 0.5
-        cell.backgroundColor = .clear
+        let cell = Bundle.main.loadNibNamed("ElementCell", owner: self, options: nil)?.first as! ElementCell
+        cell.number.text = "\(model.elements[indexPath.row].number ?? 0)"
+        cell.name.text = model.elements[indexPath.row].name ?? ""
+        cell.symbol.text = model.elements[indexPath.row].symbol ?? ""
+
         return cell
     }
     

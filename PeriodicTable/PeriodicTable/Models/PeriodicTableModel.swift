@@ -11,5 +11,8 @@ import Foundation
 class PeriodicTableModel {
     
     var elements: [ElementTableModel] = []
-    
+ 
+    init(elements: [ElementTableModel]) {
+        self.elements = elements
+    }
 }

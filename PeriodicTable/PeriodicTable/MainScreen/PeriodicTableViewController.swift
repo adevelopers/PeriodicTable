@@ -24,14 +24,20 @@ class PeriodicTableViewController: UIViewController {
         gradient.alpha = 0.8
         view.addSubview(gradient)
         
-        
         configureTableView()
+        configureTitleView()
         
     }
     
 }
 
 extension PeriodicTableViewController {
+    
+    func configureTitleView() {
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationItem.title = "Periodic Table"
+    }
  
     func configureTableView() {
         model = PeriodicTableService().getPeriodicTable()

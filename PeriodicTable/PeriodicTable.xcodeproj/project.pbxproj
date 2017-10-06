@@ -12,6 +12,8 @@
 		717063681F813FC500779A08 /* PeriodicTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717063671F813FC500779A08 /* PeriodicTableService.swift */; };
 		7170636B1F814A4800779A08 /* PeriodicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170636A1F814A4800779A08 /* PeriodicTableViewController.swift */; };
 		7170637C1F8777D300779A08 /* RadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170637B1F8777D300779A08 /* RadialGradientView.swift */; };
+		717063801F87853500779A08 /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170637E1F87853500779A08 /* ElementCell.swift */; };
+		717063811F87853500779A08 /* ElementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7170637F1F87853500779A08 /* ElementCell.xib */; };
 		71BBF2D11F71B232003C52CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBF2D01F71B232003C52CF /* AppDelegate.swift */; };
 		71BBF2D31F71B232003C52CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBF2D21F71B232003C52CF /* ViewController.swift */; };
 		71BBF2D61F71B232003C52CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BBF2D41F71B232003C52CF /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 		717063671F813FC500779A08 /* PeriodicTableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeriodicTableService.swift; path = Services/PeriodicTableService.swift; sourceTree = "<group>"; };
 		7170636A1F814A4800779A08 /* PeriodicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeriodicTableViewController.swift; path = MainScreen/PeriodicTableViewController.swift; sourceTree = "<group>"; };
 		7170637B1F8777D300779A08 /* RadialGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadialGradientView.swift; path = Common/RadialGradientView.swift; sourceTree = "<group>"; };
+		7170637E1F87853500779A08 /* ElementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementCell.swift; path = MainScreen/Cells/ElementCell.swift; sourceTree = "<group>"; };
+		7170637F1F87853500779A08 /* ElementCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ElementCell.xib; path = MainScreen/Cells/ElementCell.xib; sourceTree = "<group>"; };
 		71BBF2CD1F71B232003C52CF /* PeriodicTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeriodicTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BBF2D01F71B232003C52CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71BBF2D21F71B232003C52CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 		717063691F8149D900779A08 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				7170637D1F8784F500779A08 /* Cells */,
 				7170636A1F814A4800779A08 /* PeriodicTableViewController.swift */,
 			);
 			name = MainScreen;
@@ -76,6 +81,15 @@
 				7170637B1F8777D300779A08 /* RadialGradientView.swift */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		7170637D1F8784F500779A08 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7170637E1F87853500779A08 /* ElementCell.swift */,
+				7170637F1F87853500779A08 /* ElementCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		71BBF2C41F71B232003C52CF = {
@@ -173,6 +187,7 @@
 			files = (
 				71BBF2DB1F71B232003C52CF /* LaunchScreen.storyboard in Resources */,
 				71BBF2D81F71B232003C52CF /* Assets.xcassets in Resources */,
+				717063811F87853500779A08 /* ElementCell.xib in Resources */,
 				71BBF2D61F71B232003C52CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +205,7 @@
 				717063681F813FC500779A08 /* PeriodicTableService.swift in Sources */,
 				71BBF2D11F71B232003C52CF /* AppDelegate.swift in Sources */,
 				717063631F8135EE00779A08 /* PeriodicTableModel.swift in Sources */,
+				717063801F87853500779A08 /* ElementCell.swift in Sources */,
 				7170637C1F8777D300779A08 /* RadialGradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

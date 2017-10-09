@@ -82,5 +82,8 @@ extension PeriodicTableViewController: UITableViewDelegate {
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("tap on element \(model.elements[indexPath.row].symbol ?? "")")
+        let elementModel = model.element(at: indexPath.row)
+        let elementViewController = ElementDetailViewController(model: elementModel)
+        self.navigationController?.pushViewController(elementViewController, animated: true)
     }
 }

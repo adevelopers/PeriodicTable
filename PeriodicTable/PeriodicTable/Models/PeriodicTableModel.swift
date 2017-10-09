@@ -16,3 +16,11 @@ class PeriodicTableModel {
         self.elements = elements
     }
 }
+
+extension PeriodicTableModel {
+    
+    func element(at index: Int) -> ElementTableModel {
+        return elements[index]
+    }
+    
+}

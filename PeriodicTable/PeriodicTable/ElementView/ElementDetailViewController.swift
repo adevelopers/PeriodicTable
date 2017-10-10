@@ -66,4 +66,10 @@ extension ElementDetailViewController {
         view.addSubview(labelSymbol)
     }
     
+    func onTapInfo(sender: Any) {
+        let alert = UIAlertController(title: "info", message: "Information of element", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
 }

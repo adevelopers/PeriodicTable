@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().backgroundColor = UIColor.black
         UINavigationBar.appearance().tintColor = .white
         
+        // отключаем стрелку с кнопки назад и потом поставим свою
+        UINavigationBar.appearance().backIndicatorImage = #imageLiteral(resourceName: "button-back")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage()
+
         return true
     }
 

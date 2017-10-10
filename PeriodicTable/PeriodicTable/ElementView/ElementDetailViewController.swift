@@ -12,6 +12,7 @@ class ElementDetailViewController: UIViewController {
 
     var viewModel: ElementTableModel!
     var labelSymbol: UILabel!
+    var buttonInformation: UIButton!
     
     var screenSize: CGSize {
         return UIScreen.main.bounds.size
@@ -64,6 +65,16 @@ extension ElementDetailViewController {
         labelSymbol.textColor = .white
         labelSymbol.center = CGPoint(x: screenSize.width/2, y: screenSize.height/2)
         view.addSubview(labelSymbol)
+        buttonInformation = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        buttonInformation.contentVerticalAlignment = .center
+        buttonInformation.setTitle("i", for: .normal)
+        buttonInformation.layer.borderColor = UIColor.white.cgColor
+        buttonInformation.layer.borderWidth = 2
+        buttonInformation.layer.cornerRadius = 10
+        buttonInformation.center = CGPoint(x: screenSize.width/2+70, y: screenSize.height/2 - 50)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(onTapInfo(sender:)))
+        buttonInformation.addGestureRecognizer(tap)
+        view.addSubview(buttonInformation)
     }
     
     func onTapInfo(sender: Any) {

@@ -26,6 +26,7 @@ class ElementDetailViewController: UIViewController {
         super.viewDidLoad()
 
         configureRadialGradient()
+        configureBackButton()
         configureElementView()
     }
 
@@ -45,6 +46,15 @@ extension ElementDetailViewController {
 }
 
 extension ElementDetailViewController {
+    fileprivate func configureBackButton() {
+        
+        title = "Element Detail Infomation"
+        self.navigationController?.navigationBar.topItem?.titleView?.tintColor = .white
+        let backButton = UIBarButtonItem()
+        backButton.setTitlePositionAdjustment(UIOffset.zero, for: .compact)
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+    }
     
     fileprivate func configureElementView() {
         labelSymbol = UILabel(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 60))

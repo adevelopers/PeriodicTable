@@ -13,6 +13,7 @@ class ElementDetailViewController: UIViewController {
     var viewModel: ElementTableModel!
     var labelSymbol: UILabel!
     var labelNumber: UILabel!
+    var labelName: UILabel!
     var buttonInformation: UIButton!
     
     var screenSize: CGSize {
@@ -71,6 +72,15 @@ extension ElementDetailViewController {
         labelNumber.textColor = .white
         labelNumber.center = CGPoint(x: screenSize.width/2 - 50, y: screenSize.height/2 - 50)
         view.addSubview(labelNumber)
+        
+        labelName = UILabel(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 30))
+        labelName.textAlignment = .center
+        labelName.text = viewModel.name
+        labelName.font = UIFont(name: "American Typewriter", size: 30)
+        labelName.textColor = .white
+        labelName.center = CGPoint(x: screenSize.width/2, y: screenSize.height/2 + 50)
+        view.addSubview(labelName)
+        
         buttonInformation = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         buttonInformation.contentVerticalAlignment = .center
         buttonInformation.setTitle("i", for: .normal)

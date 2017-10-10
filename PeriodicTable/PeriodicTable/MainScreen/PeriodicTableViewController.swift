@@ -27,6 +27,14 @@ class PeriodicTableViewController: UIViewController {
         configureTableView()
         configureTitleView()
         
+        let swipeToRight = UISwipeGestureRecognizer(target: self, action: #selector(onRightSwipe(event:)))
+        view.addGestureRecognizer(swipeToRight)
+    }
+    
+    func onRightSwipe(event: Any) {
+        let aboutModel = AboutViewModel()
+        let aboutViewController = AboutViewController(model: aboutModel)
+        self.navigationController?.pushViewController(aboutViewController, animated: true)
     }
     
 }
@@ -81,9 +89,9 @@ extension PeriodicTableViewController: UITableViewDelegate {
     }
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tap on element \(model.elements[indexPath.row].symbol ?? "")")
         let elementModel = model.element(at: indexPath.row)
         let elementViewController = ElementDetailViewController(model: elementModel)
         self.navigationController?.pushViewController(elementViewController, animated: true)
     }
+    
 }

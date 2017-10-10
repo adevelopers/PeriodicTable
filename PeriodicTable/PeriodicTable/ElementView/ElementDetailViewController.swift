@@ -12,6 +12,7 @@ class ElementDetailViewController: UIViewController {
 
     var viewModel: ElementTableModel!
     var labelSymbol: UILabel!
+    var labelNumber: UILabel!
     var buttonInformation: UIButton!
     
     var screenSize: CGSize {
@@ -30,7 +31,7 @@ class ElementDetailViewController: UIViewController {
         configureBackButton()
         configureElementView()
     }
-
+    
 }
 
 extension ElementDetailViewController {
@@ -43,10 +44,7 @@ extension ElementDetailViewController {
         gradient.alpha = 0.8
         view.addSubview(gradient)
     }
-    
-}
 
-extension ElementDetailViewController {
     fileprivate func configureBackButton() {
         
         title = "Element Detail Infomation"
@@ -65,6 +63,14 @@ extension ElementDetailViewController {
         labelSymbol.textColor = .white
         labelSymbol.center = CGPoint(x: screenSize.width/2, y: screenSize.height/2)
         view.addSubview(labelSymbol)
+        
+        labelNumber = UILabel(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 30))
+        labelNumber.textAlignment = .center
+        labelNumber.text = "\(viewModel.number ?? 0)"
+        labelNumber.font = UIFont(name: "American Typewriter", size: 30)
+        labelNumber.textColor = .white
+        labelNumber.center = CGPoint(x: screenSize.width/2 - 50, y: screenSize.height/2 - 50)
+        view.addSubview(labelNumber)
         buttonInformation = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         buttonInformation.contentVerticalAlignment = .center
         buttonInformation.setTitle("i", for: .normal)

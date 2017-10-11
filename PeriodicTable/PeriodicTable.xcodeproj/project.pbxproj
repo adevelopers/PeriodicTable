@@ -69,6 +69,14 @@
 			name = AboutScreen;
 			sourceTree = "<group>";
 		};
+		713691E11F8E122100A1AC23 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				71BBF2D91F71B232003C52CF /* LaunchScreen.storyboard */,
+			);
+			name = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		717063611F8135B500779A08 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +123,7 @@
 		717063CD1F8BDF5F00779A08 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				713691E11F8E122100A1AC23 /* LaunchScreen */,
 				713691DA1F8D5FB900A1AC23 /* AboutScreen */,
 				717063691F8149D900779A08 /* MainScreen */,
 				717063D01F8BE33300779A08 /* ElementView */,
@@ -150,15 +159,14 @@
 		71BBF2CF1F71B232003C52CF /* PeriodicTable */ = {
 			isa = PBXGroup;
 			children = (
+				71BBF2D01F71B232003C52CF /* AppDelegate.swift */,
 				717063791F87777700779A08 /* Common */,
 				717063CD1F8BDF5F00779A08 /* Screens */,
 				717063661F813FA600779A08 /* Services */,
 				717063611F8135B500779A08 /* Models */,
-				71BBF2D01F71B232003C52CF /* AppDelegate.swift */,
 				71BBF2D21F71B232003C52CF /* ViewController.swift */,
 				71BBF2D41F71B232003C52CF /* Main.storyboard */,
 				71BBF2D71F71B232003C52CF /* Assets.xcassets */,
-				71BBF2D91F71B232003C52CF /* LaunchScreen.storyboard */,
 				71BBF2DC1F71B232003C52CF /* Info.plist */,
 			);
 			path = PeriodicTable;

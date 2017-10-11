@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().backIndicatorImage = #imageLiteral(resourceName: "button-back")
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage()
 
+        sleep(3)
+        
         return true
     }
 

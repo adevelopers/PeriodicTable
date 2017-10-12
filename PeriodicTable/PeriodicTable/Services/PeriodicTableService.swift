@@ -10,30 +10,36 @@ import Foundation
 
 class PeriodicTableService {
     
-    fileprivate func getElements() -> [ElementTableModel] {
+    func loadElements(from fileName: String) -> [ElementTableModel] {
+        var arElements = [ElementTableModel]()
         
-        var models = [ElementTableModel]()
-        
-        let elements = [
-            ("H","Hydrogen",1),
-            ("He","Helium",2),
-            ("Li","Lithium",3),
-            ("Ar","Argon",18),
-            ("K","Potassium",19),
-            ("Ca","Calcium",20),
-            ("Og","Oganesson",118)
-        ]
-        
-        elements.forEach{
-            let element = ElementTableModel(symbol: $0.0, name: $0.1, number: $0.2)
-            models.append(element)
+        do {
+            if let file = Bundle.main.url(forResource: fileName, withExtension: "json") {
+                let data = try Data(contentsOf: file)
+                
+                if
+                    let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+                    let elements = json["elements"] as? [[String: Any]]
+                {
+                    for element in elements {
+                        
+                        let model = ElementTableModel(symbol: (element["symbol"] as? String) ?? "",
+                                                      name: (element["name"] as? String) ?? "",
+                                                      number: (element["number"] as? Int) ?? 0)
+                        arElements.append(model)
+                    }
+                }
+                
+            }
+        } catch {
+            print("\(#function) -> error json")
         }
         
-        return models
+        return arElements
     }
     
     func getPeriodicTable() -> PeriodicTableModel {
-        return PeriodicTableModel(elements: getElements())
+        return PeriodicTableModel(elements: loadElements(from: "table"))
     }
     
 }

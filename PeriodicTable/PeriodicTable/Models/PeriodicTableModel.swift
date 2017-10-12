@@ -8,19 +8,25 @@
 
 import Foundation
 
+
 class PeriodicTableModel {
     
-    var elements: [ElementTableModel] = []
- 
+    var list = [ElementTableModel]()
+    
     init(elements: [ElementTableModel]) {
-        self.elements = elements
+        list.append(contentsOf: elements)
     }
+    
 }
 
 extension PeriodicTableModel {
     
-    func element(at index: Int) -> ElementTableModel {
-        return elements[index]
+    func element(at index: Int) -> ElementTableModel? {
+        if index < list.count {
+            return list[index]
+        } else {
+            return nil
+        }
     }
     
 }

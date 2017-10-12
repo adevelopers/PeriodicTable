@@ -67,7 +67,7 @@ extension ElementDetailViewController {
         
         labelNumber = UILabel(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 30))
         labelNumber.textAlignment = .center
-        labelNumber.text = "\(viewModel.number ?? 0)"
+        labelNumber.text = "\(viewModel.number)"
         labelNumber.font = UIFont(name: "American Typewriter", size: 30)
         labelNumber.textColor = .white
         labelNumber.center = CGPoint(x: screenSize.width/2 - 50, y: screenSize.height/2 - 50)

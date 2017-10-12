@@ -6,7 +6,7 @@ target 'PeriodicTable' do
   use_frameworks!
 
   # Pods for PeriodicTable
-  pod 'RxRealm', '0.6.0'
+  # pod 'RxRealm', '0.6.0'
 
 
 end

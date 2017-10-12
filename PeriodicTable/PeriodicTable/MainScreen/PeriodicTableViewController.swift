@@ -68,14 +68,17 @@ extension PeriodicTableViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.elements.count
+        return model.list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("ElementCell", owner: self, options: nil)?.first as! ElementCell
-        cell.number.text = "\(model.elements[indexPath.row].number ?? 0)"
-        cell.name.text = model.elements[indexPath.row].name ?? ""
-        cell.symbol.text = model.elements[indexPath.row].symbol ?? ""
+        
+        if let element = model.element(at: indexPath.row) {
+            cell.number.text = "\(element.number)"
+            cell.name.text = element.name
+            cell.symbol.text = element.symbol
+        }
 
         return cell
     }
@@ -89,9 +92,10 @@ extension PeriodicTableViewController: UITableViewDelegate {
     }
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let elementModel = model.element(at: indexPath.row)
-        let elementViewController = ElementDetailViewController(model: elementModel)
-        self.navigationController?.pushViewController(elementViewController, animated: true)
+        if let elementModel = model.element(at: indexPath.row) {
+            let elementViewController = ElementDetailViewController(model: elementModel)
+            self.navigationController?.pushViewController(elementViewController, animated: true)
+        }
     }
     
 }

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AEAED058D36CFC010B1595D /* Pods_PeriodicTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB41D483BDCB4B4C54FDE833 /* Pods_PeriodicTable.framework */; };
 		713691DD1F8D61FA00A1AC23 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713691DB1F8D61FA00A1AC23 /* AboutViewController.swift */; };
 		713691DE1F8D61FA00A1AC23 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713691DC1F8D61FA00A1AC23 /* AboutViewController.xib */; };
 		713691E01F8D638B00A1AC23 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713691DF1F8D638B00A1AC23 /* AboutViewModel.swift */; };
+		713691E31F8FBDA300A1AC23 /* table.json in Resources */ = {isa = PBXBuildFile; fileRef = 713691E21F8FBDA300A1AC23 /* table.json */; };
 		717063631F8135EE00779A08 /* PeriodicTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717063621F8135EE00779A08 /* PeriodicTableModel.swift */; };
 		717063651F81365E00779A08 /* ElementTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717063641F81365E00779A08 /* ElementTableModel.swift */; };
 		717063681F813FC500779A08 /* PeriodicTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717063671F813FC500779A08 /* PeriodicTableService.swift */; };
@@ -27,9 +29,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		574826EDBD62920D3A5E4001 /* Pods-PeriodicTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeriodicTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeriodicTable/Pods-PeriodicTable.release.xcconfig"; sourceTree = "<group>"; };
+		6D69C336C51BBA6B6C82DC0A /* Pods-PeriodicTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeriodicTable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeriodicTable/Pods-PeriodicTable.debug.xcconfig"; sourceTree = "<group>"; };
 		713691DB1F8D61FA00A1AC23 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = AboutViewController/AboutViewController.swift; sourceTree = "<group>"; };
 		713691DC1F8D61FA00A1AC23 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AboutViewController.xib; path = AboutViewController/AboutViewController.xib; sourceTree = "<group>"; };
 		713691DF1F8D638B00A1AC23 /* AboutViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewModel.swift; path = AboutViewController/AboutViewModel.swift; sourceTree = "<group>"; };
+		713691E21F8FBDA300A1AC23 /* table.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = table.json; sourceTree = "<group>"; };
 		717063621F8135EE00779A08 /* PeriodicTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeriodicTableModel.swift; path = Models/PeriodicTableModel.swift; sourceTree = "<group>"; };
 		717063641F81365E00779A08 /* ElementTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementTableModel.swift; path = Models/ElementTableModel.swift; sourceTree = "<group>"; };
 		717063671F813FC500779A08 /* PeriodicTableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeriodicTableService.swift; path = Services/PeriodicTableService.swift; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		71BBF2D71F71B232003C52CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71BBF2DA1F71B232003C52CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71BBF2DC1F71B232003C52CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB41D483BDCB4B4C54FDE833 /* Pods_PeriodicTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeriodicTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +59,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AEAED058D36CFC010B1595D /* Pods_PeriodicTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49B7590364AE9DB2799C2257 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D69C336C51BBA6B6C82DC0A /* Pods-PeriodicTable.debug.xcconfig */,
+				574826EDBD62920D3A5E4001 /* Pods-PeriodicTable.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		713691DA1F8D5FB900A1AC23 /* AboutScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +91,14 @@
 				71BBF2D91F71B232003C52CF /* LaunchScreen.storyboard */,
 			);
 			name = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		713691E41F8FBDAB00A1AC23 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				713691E21F8FBDA300A1AC23 /* table.json */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		717063611F8135B500779A08 /* Models */ = {
@@ -145,6 +169,8 @@
 			children = (
 				71BBF2CF1F71B232003C52CF /* PeriodicTable */,
 				71BBF2CE1F71B232003C52CF /* Products */,
+				49B7590364AE9DB2799C2257 /* Pods */,
+				8A89FD1DFA3E6007E8C5FEEC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +185,7 @@
 		71BBF2CF1F71B232003C52CF /* PeriodicTable */ = {
 			isa = PBXGroup;
 			children = (
+				713691E41F8FBDAB00A1AC23 /* Resources */,
 				71BBF2D01F71B232003C52CF /* AppDelegate.swift */,
 				717063791F87777700779A08 /* Common */,
 				717063CD1F8BDF5F00779A08 /* Screens */,
@@ -172,6 +199,14 @@
 			path = PeriodicTable;
 			sourceTree = "<group>";
 		};
+		8A89FD1DFA3E6007E8C5FEEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB41D483BDCB4B4C54FDE833 /* Pods_PeriodicTable.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71BBF2DF1F71B232003C52CF /* Build configuration list for PBXNativeTarget "PeriodicTable" */;
 			buildPhases = (
+				00846A30542D8A757A9C2E50 /* [CP] Check Pods Manifest.lock */,
 				71BBF2C91F71B232003C52CF /* Sources */,
 				71BBF2CA1F71B232003C52CF /* Frameworks */,
 				71BBF2CB1F71B232003C52CF /* Resources */,
+				6B5320CD7DD68D06F8BB7B40 /* [CP] Embed Pods Frameworks */,
+				6F9A1C0DA3F0258BB8963632 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,11 +275,60 @@
 				717063811F87853500779A08 /* ElementCell.xib in Resources */,
 				71BBF2D61F71B232003C52CF /* Main.storyboard in Resources */,
 				713691DE1F8D61FA00A1AC23 /* AboutViewController.xib in Resources */,
+				713691E31F8FBDA300A1AC23 /* table.json in Resources */,
 				717063D41F8BE4A500779A08 /* ElementDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00846A30542D8A757A9C2E50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6B5320CD7DD68D06F8BB7B40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeriodicTable/Pods-PeriodicTable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F9A1C0DA3F0258BB8963632 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeriodicTable/Pods-PeriodicTable-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		71BBF2C91F71B232003C52CF /* Sources */ = {
@@ -381,6 +468,7 @@
 		};
 		71BBF2E01F71B232003C52CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D69C336C51BBA6B6C82DC0A /* Pods-PeriodicTable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RF42FG352F;
@@ -394,6 +482,7 @@
 		};
 		71BBF2E11F71B232003C52CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 574826EDBD62920D3A5E4001 /* Pods-PeriodicTable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RF42FG352F;

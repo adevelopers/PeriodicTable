@@ -8,17 +8,19 @@
 
 import Foundation
 
+
 /// Модель элемента таблицы Менделеева
 class ElementTableModel {
     
-    var symbol: String?
-    var name: String?
-    var number: Int?            // номер
+    dynamic var symbol = ""
+    dynamic var name = ""
+    dynamic var number =  0
     
     init(symbol: String, name: String, number: Int) {
         self.symbol = symbol
         self.name = name
         self.number = number
     }
+    
     
 }

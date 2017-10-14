@@ -13,6 +13,8 @@ class PeriodicTableViewController: UIViewController {
     var tableView: UITableView!
     
     var model: PeriodicTableModel!
+    var searchController: UISearchController!
+    var filtredResult: [ElementTableModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,12 @@ class PeriodicTableViewController: UIViewController {
         
         let swipeToRight = UISwipeGestureRecognizer(target: self, action: #selector(onRightSwipe(event:)))
         view.addGestureRecognizer(swipeToRight)
+        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        tableView.tableHeaderView = searchController.searchBar
+        
     }
     
     func onRightSwipe(event: Any) {
@@ -62,13 +70,16 @@ extension PeriodicTableViewController {
         view.addSubview(tableView)
     }
     
+    func configureSearchBar() {
+        
+    }
 }
 
 extension PeriodicTableViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.list.count
+        return model.filteredList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -98,4 +109,20 @@ extension PeriodicTableViewController: UITableViewDelegate {
         }
     }
     
+}
+
+// MARK: Search Bar
+extension PeriodicTableViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let count = searchController.searchBar.text?.characters.count, count > 0{
+            model.filterCriteria = searchController.searchBar.text
+        }
+        else {
+            model.filterCriteria = nil
+        }
+        
+        tableView.reloadData()
+    }
+
 }

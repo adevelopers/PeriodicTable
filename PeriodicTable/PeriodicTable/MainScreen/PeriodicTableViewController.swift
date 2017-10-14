@@ -28,15 +28,10 @@ class PeriodicTableViewController: UIViewController {
         
         configureTableView()
         configureTitleView()
+        configureSearchBar()
         
         let swipeToRight = UISwipeGestureRecognizer(target: self, action: #selector(onRightSwipe(event:)))
         view.addGestureRecognizer(swipeToRight)
-        
-        searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        tableView.tableHeaderView = searchController.searchBar
-        
     }
     
     func onRightSwipe(event: Any) {
@@ -71,8 +66,12 @@ extension PeriodicTableViewController {
     }
     
     func configureSearchBar() {
-        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        tableView.tableHeaderView = searchController.searchBar
     }
+
 }
 
 extension PeriodicTableViewController: UITableViewDataSource {

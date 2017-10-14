@@ -12,6 +12,7 @@ import Foundation
 class PeriodicTableModel {
     
     var list = [ElementTableModel]()
+    var filterCriteria: String?
     
     init(elements: [ElementTableModel]) {
         list.append(contentsOf: elements)

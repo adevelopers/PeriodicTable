@@ -94,6 +94,7 @@ extension MainScreenCollectionViewController {
         customSearchBar.layer.borderWidth = 1
         customSearchBar.center.y += offset
         customSearchBar.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged )
+        customSearchBar.delegate = self
         view.addSubview(customSearchBar)
     }
     
@@ -105,6 +106,15 @@ extension MainScreenCollectionViewController {
         }
         
         collectionView.reloadData()
+    }
+    
+}
+
+extension MainScreenCollectionViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        customSearchBar.endEditing(true)
+        return false
     }
     
 }

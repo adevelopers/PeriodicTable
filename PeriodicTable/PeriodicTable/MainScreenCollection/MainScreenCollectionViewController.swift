@@ -12,7 +12,6 @@ class MainScreenCollectionViewController: UIViewController {
     
     var collectionView: UICollectionView!
     var searchController: UISearchController!
-    var searchBar: UISearchBar!
     var customSearchBar: UITextField!
     var model: PeriodicTableModel!
     
@@ -39,6 +38,11 @@ class MainScreenCollectionViewController: UIViewController {
 
         let swipeToRight = UISwipeGestureRecognizer(target: self, action: #selector(onRightSwipe(event:)))
         view.addGestureRecognizer(swipeToRight)
+        
+        let tapToDimm = UITapGestureRecognizer(target: self, action: #selector(onTapToDimm(event:)))
+        tapToDimm.cancelsTouchesInView = false
+        collectionView.addGestureRecognizer(tapToDimm)
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -49,6 +53,10 @@ class MainScreenCollectionViewController: UIViewController {
         let aboutModel = AboutViewModel()
         let aboutViewController = AboutViewController(model: aboutModel)
         self.navigationController?.pushViewController(aboutViewController, animated: true)
+    }
+    
+    func onTapToDimm(event: Any) {
+        customSearchBar.resignFirstResponder()
     }
     
 }

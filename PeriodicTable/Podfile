@@ -7,6 +7,6 @@ target 'PeriodicTable' do
 
   # Pods for PeriodicTable
   # pod 'RxRealm', '0.6.0'
-
+  pod 'Bugsee', '1.14.8'
 
 end

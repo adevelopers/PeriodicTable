@@ -12,6 +12,9 @@
 		713691DE1F8D61FA00A1AC23 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713691DC1F8D61FA00A1AC23 /* AboutViewController.xib */; };
 		713691E01F8D638B00A1AC23 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713691DF1F8D638B00A1AC23 /* AboutViewModel.swift */; };
 		713691E31F8FBDA300A1AC23 /* table.json in Resources */ = {isa = PBXBuildFile; fileRef = 713691E21F8FBDA300A1AC23 /* table.json */; };
+		713691EE1F92A21500A1AC23 /* MainScreenCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713691ED1F92A21500A1AC23 /* MainScreenCollectionViewController.swift */; };
+		713691F41F92B81200A1AC23 /* ElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713691F21F92B81200A1AC23 /* ElementCollectionViewCell.swift */; };
+		713691F51F92B81200A1AC23 /* ElementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713691F31F92B81200A1AC23 /* ElementCollectionViewCell.xib */; };
 		717063631F8135EE00779A08 /* PeriodicTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717063621F8135EE00779A08 /* PeriodicTableModel.swift */; };
 		717063651F81365E00779A08 /* ElementTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717063641F81365E00779A08 /* ElementTableModel.swift */; };
 		717063681F813FC500779A08 /* PeriodicTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717063671F813FC500779A08 /* PeriodicTableService.swift */; };
@@ -35,6 +38,9 @@
 		713691DC1F8D61FA00A1AC23 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AboutViewController.xib; path = AboutViewController/AboutViewController.xib; sourceTree = "<group>"; };
 		713691DF1F8D638B00A1AC23 /* AboutViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewModel.swift; path = AboutViewController/AboutViewModel.swift; sourceTree = "<group>"; };
 		713691E21F8FBDA300A1AC23 /* table.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = table.json; sourceTree = "<group>"; };
+		713691ED1F92A21500A1AC23 /* MainScreenCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewController.swift; sourceTree = "<group>"; };
+		713691F21F92B81200A1AC23 /* ElementCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementCollectionViewCell.swift; sourceTree = "<group>"; };
+		713691F31F92B81200A1AC23 /* ElementCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ElementCollectionViewCell.xib; sourceTree = "<group>"; };
 		717063621F8135EE00779A08 /* PeriodicTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeriodicTableModel.swift; path = Models/PeriodicTableModel.swift; sourceTree = "<group>"; };
 		717063641F81365E00779A08 /* ElementTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementTableModel.swift; path = Models/ElementTableModel.swift; sourceTree = "<group>"; };
 		717063671F813FC500779A08 /* PeriodicTableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeriodicTableService.swift; path = Services/PeriodicTableService.swift; sourceTree = "<group>"; };
@@ -101,6 +107,24 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		713691EC1F92A02000A1AC23 /* MainScreenCollection */ = {
+			isa = PBXGroup;
+			children = (
+				713691EF1F92B7CC00A1AC23 /* Cells */,
+				713691ED1F92A21500A1AC23 /* MainScreenCollectionViewController.swift */,
+			);
+			path = MainScreenCollection;
+			sourceTree = "<group>";
+		};
+		713691EF1F92B7CC00A1AC23 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				713691F21F92B81200A1AC23 /* ElementCollectionViewCell.swift */,
+				713691F31F92B81200A1AC23 /* ElementCollectionViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		717063611F8135B500779A08 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +174,7 @@
 				713691E11F8E122100A1AC23 /* LaunchScreen */,
 				713691DA1F8D5FB900A1AC23 /* AboutScreen */,
 				717063691F8149D900779A08 /* MainScreen */,
+				713691EC1F92A02000A1AC23 /* MainScreenCollection */,
 				717063D01F8BE33300779A08 /* ElementView */,
 			);
 			name = Screens;
@@ -277,6 +302,7 @@
 				713691DE1F8D61FA00A1AC23 /* AboutViewController.xib in Resources */,
 				713691E31F8FBDA300A1AC23 /* table.json in Resources */,
 				717063D41F8BE4A500779A08 /* ElementDetailViewController.xib in Resources */,
+				713691F51F92B81200A1AC23 /* ElementCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,10 +364,12 @@
 				7170636B1F814A4800779A08 /* PeriodicTableViewController.swift in Sources */,
 				713691E01F8D638B00A1AC23 /* AboutViewModel.swift in Sources */,
 				71BBF2D31F71B232003C52CF /* ViewController.swift in Sources */,
+				713691F41F92B81200A1AC23 /* ElementCollectionViewCell.swift in Sources */,
 				717063651F81365E00779A08 /* ElementTableModel.swift in Sources */,
 				717063681F813FC500779A08 /* PeriodicTableService.swift in Sources */,
 				71BBF2D11F71B232003C52CF /* AppDelegate.swift in Sources */,
 				717063D31F8BE4A500779A08 /* ElementDetailViewController.swift in Sources */,
+				713691EE1F92A21500A1AC23 /* MainScreenCollectionViewController.swift in Sources */,
 				717063631F8135EE00779A08 /* PeriodicTableModel.swift in Sources */,
 				717063801F87853500779A08 /* ElementCell.swift in Sources */,
 				713691DD1F8D61FA00A1AC23 /* AboutViewController.swift in Sources */,

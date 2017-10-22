@@ -33,6 +33,8 @@ class ElementDetailViewController: UIViewController {
         configureRadialGradient()
         configureBackButton()
         configureElementView()
+        configureImageView()
+    
     }
     
 }
@@ -94,6 +96,25 @@ extension ElementDetailViewController {
         buttonInformation.addGestureRecognizer(tap)
         view.addSubview(buttonInformation)
     }
+
+    fileprivate func configureImageView() {
+        elementImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        let url = URL(string: viewModel.imagePath)!
+        elementImageView.kf.setImage(with: url)
+        elementImageView.center = CGPoint(x: screenSize.width/2, y: screenSize.height/2 - elementImageView.frame.height - 30)
+        elementImageView.layer.borderColor = UIColor.white.cgColor
+        elementImageView.layer.borderWidth = 2
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(onTapToImage(sender:)))
+        elementImageView.addGestureRecognizer(tap)
+        elementImageView.isUserInteractionEnabled = true
+        
+        view.addSubview(elementImageView)
+        
+    }
+    
+}
+
     
     func onTapInfo(sender: Any) {
         let alert = UIAlertController(title: "info", message: "Information of element", preferredStyle: .alert)

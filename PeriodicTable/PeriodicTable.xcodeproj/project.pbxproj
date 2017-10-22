@@ -25,7 +25,6 @@
 		717063D31F8BE4A500779A08 /* ElementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717063D11F8BE4A500779A08 /* ElementDetailViewController.swift */; };
 		717063D41F8BE4A500779A08 /* ElementDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 717063D21F8BE4A500779A08 /* ElementDetailViewController.xib */; };
 		71BBF2D11F71B232003C52CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBF2D01F71B232003C52CF /* AppDelegate.swift */; };
-		71BBF2D31F71B232003C52CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBF2D21F71B232003C52CF /* ViewController.swift */; };
 		71BBF2D61F71B232003C52CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BBF2D41F71B232003C52CF /* Main.storyboard */; };
 		71BBF2D81F71B232003C52CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BBF2D71F71B232003C52CF /* Assets.xcassets */; };
 		71BBF2DB1F71B232003C52CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BBF2D91F71B232003C52CF /* LaunchScreen.storyboard */; };
@@ -52,7 +51,6 @@
 		717063D21F8BE4A500779A08 /* ElementDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ElementDetailViewController.xib; path = ElementView/ElementDetailViewController.xib; sourceTree = "<group>"; };
 		71BBF2CD1F71B232003C52CF /* PeriodicTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeriodicTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BBF2D01F71B232003C52CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71BBF2D21F71B232003C52CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		71BBF2D51F71B232003C52CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71BBF2D71F71B232003C52CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71BBF2DA1F71B232003C52CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -216,7 +214,6 @@
 				717063CD1F8BDF5F00779A08 /* Screens */,
 				717063661F813FA600779A08 /* Services */,
 				717063611F8135B500779A08 /* Models */,
-				71BBF2D21F71B232003C52CF /* ViewController.swift */,
 				71BBF2D41F71B232003C52CF /* Main.storyboard */,
 				71BBF2D71F71B232003C52CF /* Assets.xcassets */,
 				71BBF2DC1F71B232003C52CF /* Info.plist */,
@@ -363,7 +360,6 @@
 			files = (
 				7170636B1F814A4800779A08 /* PeriodicTableViewController.swift in Sources */,
 				713691E01F8D638B00A1AC23 /* AboutViewModel.swift in Sources */,
-				71BBF2D31F71B232003C52CF /* ViewController.swift in Sources */,
 				713691F41F92B81200A1AC23 /* ElementCollectionViewCell.swift in Sources */,
 				717063651F81365E00779A08 /* ElementTableModel.swift in Sources */,
 				717063681F813FC500779A08 /* PeriodicTableService.swift in Sources */,

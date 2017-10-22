@@ -115,11 +115,17 @@ extension ElementDetailViewController {
     
 }
 
+extension ElementDetailViewController {
     
     func onTapInfo(sender: Any) {
         let alert = UIAlertController(title: "info", message: "Information of element", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    
+    func onTapToImage(sender: Any) {
+        let imageViewController = ElementDetailImageViewController(model: viewModel)
+        self.navigationController?.pushViewController(imageViewController, animated: true)
     }
     
 }

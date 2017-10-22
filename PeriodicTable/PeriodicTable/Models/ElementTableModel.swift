@@ -16,6 +16,10 @@ class ElementTableModel {
     dynamic var name = ""
     dynamic var number =  0
     
+    var imagePath: String {
+        return "http://images-of-elements.com/s/" + name.lowercased() + ".jpg"
+    }
+    
     init(symbol: String, name: String, number: Int) {
         self.symbol = symbol
         self.name = name

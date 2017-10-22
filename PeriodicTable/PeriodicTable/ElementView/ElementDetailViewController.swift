@@ -16,6 +16,7 @@ class ElementDetailViewController: UIViewController {
     var labelNumber: UILabel!
     var labelName: UILabel!
     var buttonInformation: UIButton!
+    var elementImageView: UIImageView!
     
     var screenSize: CGSize {
         return UIScreen.main.bounds.size

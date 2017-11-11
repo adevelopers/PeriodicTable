@@ -16,6 +16,14 @@ class ElementTableModel {
     dynamic var name = ""
     dynamic var number =  0
     
+    dynamic var electronConfig = ""
+    dynamic var category = ""
+    dynamic var period = 0
+    dynamic var group = 0
+    dynamic var valence = 0
+    dynamic var electronegativity: Double = 0
+    dynamic var mass: Double = 0
+
     var imagePath: String {
         return "http://images-of-elements.com/s/" + name.lowercased() + ".jpg"
     }
@@ -25,6 +33,5 @@ class ElementTableModel {
         self.name = name
         self.number = number
     }
-    
     
 }

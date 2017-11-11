@@ -26,6 +26,15 @@ class PeriodicTableService {
                         let model = ElementTableModel(symbol: (element["symbol"] as? String) ?? "",
                                                       name: (element["name"] as? String) ?? "",
                                                       number: (element["number"] as? Int) ?? 0)
+                        
+                        model.category = element["category"] as? String ?? ""
+                        model.electronConfig = element["electronConfig"] as? String ?? ""
+                        model.mass = element["molar"] as? Double ?? 0
+                        model.electronegativity  = element["electronegativity"] as? Double ?? 0
+                        
+                        model.group = element["group"] as? Int ?? 0
+                        model.period = element["period"] as? Int ?? 0
+                        
                         arElements.append(model)
                     }
                 }

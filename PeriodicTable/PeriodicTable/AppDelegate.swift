@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().backIndicatorImage = #imageLiteral(resourceName: "button-back")
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage()
         
+        if let path = Bundle.main.resourcePath {
+            print(path  + "/images/")
+        }
+        
         Bugsee.launch(token :"13545456-68eb-43c2-b564-bfdeb167d37a")
         
         return true

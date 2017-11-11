@@ -12,7 +12,13 @@ import Kingfisher
 class ElementDetailViewController: UIViewController {
 
     var viewModel: ElementTableModel!
-    var labelSymbol: UILabel!
+    //var labelSymbol: UILabel!
+    @IBOutlet weak var labelSymbol: UILabel!
+    @IBOutlet weak var electronConfig: UILabel!
+    @IBOutlet weak var labelPeriod: UILabel!
+    @IBOutlet weak var labelColumn: UILabel!
+    @IBOutlet weak var labelMass: UILabel!
+    
     var labelNumber: UILabel!
     var labelName: UILabel!
     var buttonInformation: UIButton!
@@ -61,7 +67,7 @@ extension ElementDetailViewController {
     }
     
     fileprivate func configureElementView() {
-        labelSymbol = UILabel(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 60))
+        /*labelSymbol = UILabel(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 60))*/
         labelSymbol.textAlignment = .center
         labelSymbol.text = viewModel.symbol
         labelSymbol.font = UIFont(name: "American Typewriter", size: 50)
@@ -95,12 +101,17 @@ extension ElementDetailViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(onTapInfo(sender:)))
         buttonInformation.addGestureRecognizer(tap)
         view.addSubview(buttonInformation)
+        
+        electronConfig.text = "Config: "+viewModel.electronConfig
+        labelPeriod.text = "Period: \(viewModel.period)"
+        labelColumn.text = "Column: \(viewModel.group)"
+        labelMass.text = String(format: "Mass: %0.2f", viewModel.mass)
+        
     }
 
     fileprivate func configureImageView() {
         elementImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        let url = URL(string: viewModel.imagePath)!
-        elementImageView.kf.setImage(with: url)
+        elementImageView.image = UIImage(named: viewModel.symbol)
         elementImageView.center = CGPoint(x: screenSize.width/2, y: screenSize.height/2 - elementImageView.frame.height - 30)
         elementImageView.layer.borderColor = UIColor.white.cgColor
         elementImageView.layer.borderWidth = 2
@@ -110,7 +121,6 @@ extension ElementDetailViewController {
         elementImageView.isUserInteractionEnabled = true
         
         view.addSubview(elementImageView)
-        
     }
     
 }

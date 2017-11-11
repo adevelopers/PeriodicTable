@@ -26,8 +26,7 @@ class ElementDetailImageViewController: UIViewController {
         configureBackButton()
         
         if let viewModel = viewModel {
-            let url = URL(string: viewModel.imagePath)!
-            imageView.kf.setImage(with: url)
+            imageView.image = UIImage(named: viewModel.symbol)
         }
     }
 

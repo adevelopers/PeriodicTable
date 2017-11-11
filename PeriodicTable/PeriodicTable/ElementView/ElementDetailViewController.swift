@@ -111,8 +111,6 @@ extension ElementDetailViewController {
 
     fileprivate func configureImageView() {
         elementImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-//        let url = URL(string: viewModel.imagePath)!
-//        elementImageView.kf.setImage(with: url)
         elementImageView.image = UIImage(named: viewModel.symbol)
         elementImageView.center = CGPoint(x: screenSize.width/2, y: screenSize.height/2 - elementImageView.frame.height - 30)
         elementImageView.layer.borderColor = UIColor.white.cgColor

@@ -1,8 +1,8 @@
 # PeriodicTable App
 ### Periodic Table -  приложение по мотивам таблицы Менделеева
 
-(PeriodicTableScreen1.png | witdh=200)
-<img src=PeriodicTableScreen1.png witdh=200 />
+![](PeriodicTableScreen1.png | width=100)
+
 
 
 Platform: iOS <br>

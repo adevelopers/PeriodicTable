@@ -1,22 +1,15 @@
 # PeriodicTable App
-Periodic Table -  приложение по мотивам таблицы Менделеева
+### Periodic Table -  приложение по мотивам таблицы Менделеева
 
 
 
-Platform: iOS 
+Platform: iOS <br>
+Development languages: Swift. <br>
+Development Tools: Xcode <br>
+Development Technologies:  MVVM <br>
 
-Development languages: Swift. 
-
-Development Tools: Xcode
-
-Development Technologies:  MVVM
-
-Compilation instructions: 
-
-MacOS computer with Xcode v. 8.0 or higher 
-
-Download repository. 
-
-Open PeriodicTable.xcodeproj in /PeriodicTable folder 
-
-Run project in iOS simulator device or connecter iOS device with iOS 10.0 or higher.
+### Compilation instructions: <br>
+MacOS computer with Xcode v. 8.0 or higher <br>
+Download repository. <br>
+Open PeriodicTable.xcodeproj in /PeriodicTable folder <br>
+Run project in iOS simulator device or connecter iOS device with iOS 10.0 or higher.<br>

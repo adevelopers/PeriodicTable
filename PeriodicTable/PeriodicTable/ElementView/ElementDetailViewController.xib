@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ElementDetailViewController" customModule="PeriodicTable" customModuleProvider="target">
+            <connections>
+                <outlet property="electronConfig" destination="GgC-z8-7O0" id="dzr-KR-MHh"/>
+                <outlet property="labelColumn" destination="kAv-L3-S3L" id="xT7-v0-BCD"/>
+                <outlet property="labelMass" destination="0Ui-7H-Cfq" id="Dhj-el-GUt"/>
+                <outlet property="labelPeriod" destination="jpc-aS-52Z" id="Cnq-5d-skR"/>
+                <outlet property="labelSymbol" destination="8mN-EE-SeL" id="gg8-Ns-NIY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mN-EE-SeL">
+                    <rect key="frame" x="138" y="232" width="98" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="63y-KV-BmH"/>
+                        <constraint firstAttribute="width" constant="98" id="6U0-eR-8p7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass: 23.12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ui-7H-Cfq">
+                    <rect key="frame" x="88" y="364" width="200" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="U61-va-kcA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Electron config: 1s2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgC-z8-7O0">
+                    <rect key="frame" x="88" y="393" width="200" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="XfA-Fb-FPb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpc-aS-52Z">
+                    <rect key="frame" x="88" y="422" width="200" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="jVd-ym-0V4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Column" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAv-L3-S3L">
+                    <rect key="frame" x="87" y="451" width="200" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="sTc-PJ-prc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="0Ui-7H-Cfq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AEA-Fx-oiE"/>
+                <constraint firstItem="GgC-z8-7O0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Bth-At-bEn"/>
+                <constraint firstItem="0Ui-7H-Cfq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CAA-Xk-YAM"/>
+                <constraint firstItem="kAv-L3-S3L" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CGK-5k-uce"/>
+                <constraint firstItem="0Ui-7H-Cfq" firstAttribute="top" secondItem="8mN-EE-SeL" secondAttribute="bottom" constant="60" id="Esg-F3-y11"/>
+                <constraint firstItem="kAv-L3-S3L" firstAttribute="top" secondItem="jpc-aS-52Z" secondAttribute="bottom" constant="8" symbolic="YES" id="GK2-RJ-hjn"/>
+                <constraint firstItem="GgC-z8-7O0" firstAttribute="top" secondItem="0Ui-7H-Cfq" secondAttribute="bottom" constant="8" symbolic="YES" id="K7R-ER-AgR"/>
+                <constraint firstItem="jpc-aS-52Z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UOS-M3-Djp"/>
+                <constraint firstItem="jpc-aS-52Z" firstAttribute="top" secondItem="GgC-z8-7O0" secondAttribute="bottom" constant="8" symbolic="YES" id="YoS-Ic-Pm7"/>
+                <constraint firstItem="8mN-EE-SeL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fgu-zD-THr"/>
+                <constraint firstItem="8mN-EE-SeL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="232" id="oNh-MZ-hqV"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

@@ -27,6 +27,8 @@ class ElementDetailImageViewController: UIViewController {
         
         if let viewModel = viewModel {
             imageView.image = UIImage(named: viewModel.symbol)
+            imageView.contentMode = .scaleAspectFit
+            imageView.backgroundColor = .black
         }
     }
 

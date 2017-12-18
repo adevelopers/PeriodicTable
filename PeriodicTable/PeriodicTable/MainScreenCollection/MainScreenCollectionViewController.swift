@@ -49,13 +49,13 @@ class MainScreenCollectionViewController: UIViewController {
         collectionView.contentOffset.y += 10
     }
     
-    func onRightSwipe(event: Any) {
+    @objc func onRightSwipe(event: Any) {
         let aboutModel = AboutViewModel()
         let aboutViewController = AboutViewController(model: aboutModel)
         self.navigationController?.pushViewController(aboutViewController, animated: true)
     }
     
-    func onTapToDimm(event: Any) {
+    @objc func onTapToDimm(event: Any) {
         customSearchBar.resignFirstResponder()
     }
     
@@ -65,7 +65,7 @@ extension MainScreenCollectionViewController {
     
     func configureTitleView() {
         navigationController?.navigationBar.barTintColor = .black
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         navigationItem.title = "Periodic Table"
     }
     
@@ -98,8 +98,8 @@ extension MainScreenCollectionViewController {
         view.addSubview(customSearchBar)
     }
     
-    func textFieldDidChange(_ textField: UITextField) {
-        if let count = textField.text?.characters.count, count > 0{
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if let count = textField.text?.count, count > 0{
             model.filterCriteria = textField.text
         } else {
             model.filterCriteria = nil
@@ -155,7 +155,7 @@ extension MainScreenCollectionViewController: UICollectionViewDelegate {
 extension MainScreenCollectionViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        if let count = searchController.searchBar.text?.characters.count, count > 0{
+        if let count = searchController.searchBar.text?.count, count > 0{
             model.filterCriteria = searchController.searchBar.text
         }
         else {

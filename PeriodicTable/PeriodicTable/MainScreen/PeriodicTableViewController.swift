@@ -46,7 +46,7 @@ extension PeriodicTableViewController {
     
     func configureTitleView() {
         navigationController?.navigationBar.barTintColor = .black
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         navigationItem.title = "Periodic Table"
     }
  
@@ -114,7 +114,7 @@ extension PeriodicTableViewController: UITableViewDelegate {
 extension PeriodicTableViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        if let count = searchController.searchBar.text?.characters.count, count > 0{
+        if let count = searchController.searchBar.text?.count, count > 0{
             model.filterCriteria = searchController.searchBar.text
         }
         else {

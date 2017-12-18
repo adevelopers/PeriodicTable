@@ -12,17 +12,17 @@ import Foundation
 /// Модель элемента таблицы Менделеева
 class ElementTableModel {
     
-    dynamic var symbol = ""
-    dynamic var name = ""
-    dynamic var number =  0
+    @objc dynamic var symbol = ""
+    @objc dynamic var name = ""
+    @objc dynamic var number =  0
     
-    dynamic var electronConfig = ""
-    dynamic var category = ""
-    dynamic var period = 0
-    dynamic var group = 0
-    dynamic var valence = 0
-    dynamic var electronegativity: Double = 0
-    dynamic var mass: Double = 0
+    @objc dynamic var electronConfig = ""
+    @objc dynamic var category = ""
+    @objc dynamic var period = 0
+    @objc dynamic var group = 0
+    @objc dynamic var valence = 0
+    @objc dynamic var electronegativity: Double = 0
+    @objc dynamic var mass: Double = 0
 
     var imagePath: String {
         return "http://images-of-elements.com/s/" + name.lowercased() + ".jpg"

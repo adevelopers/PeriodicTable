@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Bugsee
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().backIndicatorImage = #imageLiteral(resourceName: "button-back")
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage()
         
-        Bugsee.launch(token :"13545456-68eb-43c2-b564-bfdeb167d37a")
         
         return true
     }

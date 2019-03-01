@@ -58,7 +58,7 @@ extension ElementDetailViewController {
 
     fileprivate func configureBackButton() {
         
-        title = "Element Detail Infomation"
+        title = viewModel.name
         self.navigationController?.navigationBar.topItem?.titleView?.tintColor = .white
         let backButton = UIBarButtonItem()
         backButton.setTitlePositionAdjustment(UIOffset.zero, for: .compact)

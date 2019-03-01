@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import SnapKit
+
 
 class ElementDetailViewController: UIViewController {
 
@@ -58,7 +58,7 @@ extension ElementDetailViewController {
 
     fileprivate func configureBackButton() {
         
-        title = "Element Detail Infomation"
+        title = viewModel.name
         self.navigationController?.navigationBar.topItem?.titleView?.tintColor = .white
         let backButton = UIBarButtonItem()
         backButton.setTitlePositionAdjustment(UIOffset.zero, for: .compact)
@@ -67,17 +67,15 @@ extension ElementDetailViewController {
     }
     
     fileprivate func configureElementView() {
-        
         configureSymbol()
         configureNumber()
         configureName()
         configureButtonInformation()
 
-        electronConfig.text = "Config: "+viewModel.electronConfig
+        electronConfig.text = "Config: " + viewModel.electronConfig
         labelPeriod.text = "Period: \(viewModel.period)"
         labelColumn.text = "Column: \(viewModel.group)"
         labelMass.text = String(format: "Mass: %0.2f", viewModel.mass)
-        
     }
     
     private func configureButtonInformation() {
@@ -146,55 +144,45 @@ extension ElementDetailViewController {
     }
 
     fileprivate func setupConstaints() {
+        elementImageView.translatesAutoresizingMaskIntoConstraints = false
+        elementImageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        elementImageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        elementImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        elementImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 114).isActive = true
+
+        labelSymbol.translatesAutoresizingMaskIntoConstraints = false
+        labelSymbol.topAnchor.constraint(equalTo: elementImageView.bottomAnchor, constant: 30).isActive = true
+        labelSymbol.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        labelSymbol.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        labelSymbol.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        elementImageView.snp.makeConstraints { set in
-            set.width.equalTo(100)
-            set.height.equalTo(100)
-            set.top.equalTo(114)
-            set.centerX.equalToSuperview()
-        }
+        labelNumber.translatesAutoresizingMaskIntoConstraints = false
+        labelNumber.widthAnchor.constraint(equalToConstant: 62).isActive = true
+        labelNumber.heightAnchor.constraint(equalToConstant: 42).isActive = true
+        labelNumber.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        labelNumber.rightAnchor.constraint(equalTo: labelSymbol.leftAnchor, constant: -10).isActive = true
         
-        labelSymbol.snp.makeConstraints { set in
-            set.top.equalTo(elementImageView.snp.bottom).offset(30)
-            set.width.equalTo(100)
-            set.height.equalTo(70)
-            set.centerX.equalToSuperview()
-        }
+        labelName.translatesAutoresizingMaskIntoConstraints = false
+        labelName.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        labelName.heightAnchor.constraint(equalToConstant: 42).isActive = true
+        labelName.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        labelName.topAnchor.constraint(equalTo: labelSymbol.bottomAnchor, constant: 10).isActive = true
         
-        labelNumber.snp.makeConstraints { set in
-            set.width.equalTo(62)
-            set.height.equalTo(42)
-            set.centerY.equalTo(labelSymbol.snp.centerY)
-            set.right.equalTo(labelSymbol.snp.left).offset(-10)
-        }
+        labelMass.translatesAutoresizingMaskIntoConstraints = false
+        labelMass.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 20).isActive = true
+        labelMass.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50).isActive = true
         
-        labelName.snp.makeConstraints { set in
-            set.width.equalTo(200)
-            set.height.equalTo(42)
-            set.centerX.equalToSuperview()
-            set.top.equalTo(labelSymbol.snp.bottom).offset(10)
-        }
+        electronConfig.translatesAutoresizingMaskIntoConstraints = false
+        electronConfig.topAnchor.constraint(equalTo: labelMass.bottomAnchor, constant: 10).isActive = true
+        electronConfig.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50).isActive = true
         
-        labelMass.snp.makeConstraints { set in
-            set.top.equalTo(labelName.snp.bottom).offset(20)
-            set.left.equalToSuperview().offset(50)
-        }
+        labelPeriod.translatesAutoresizingMaskIntoConstraints = false
+        labelPeriod.topAnchor.constraint(equalTo: electronConfig.bottomAnchor, constant: 10).isActive = true
+        labelPeriod.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50).isActive = true
         
-        electronConfig.snp.makeConstraints { set in
-            set.top.equalTo(labelMass.snp.bottom).offset(10)
-            set.left.equalToSuperview().offset(50)
-        }
-        
-        labelPeriod.snp.makeConstraints { set in
-            set.top.equalTo(electronConfig.snp.bottom).offset(10)
-            set.left.equalToSuperview().offset(50)
-        }
-        
-        labelColumn.snp.makeConstraints { set in
-            set.top.equalTo(labelPeriod.snp.bottom).offset(10)
-            set.left.equalToSuperview().offset(50)
-        }
-        
+        labelColumn.translatesAutoresizingMaskIntoConstraints = false
+        labelColumn.topAnchor.constraint(equalTo: labelPeriod.bottomAnchor, constant: 10).isActive = true
+        labelColumn.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50).isActive = true
         
     }
     

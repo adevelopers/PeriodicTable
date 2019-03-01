@@ -35,7 +35,10 @@ class AboutViewController: UIViewController {
         textView.textColor = .white
         textView.isEditable = false
         textView.backgroundColor = .clear
-        textView.textContainerInset = UIEdgeInsets(top: 80, left: 30, bottom: 30, right: 30)
+        textView.textContainerInset = UIEdgeInsets(top: 80,
+                                                   left: 30,
+                                                   bottom: 30,
+                                                   right: 30)
         textView.font = UIFont(name: "Arial", size: 14)
         textView.alpha = 0.6
     }

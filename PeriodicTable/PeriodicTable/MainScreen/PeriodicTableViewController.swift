@@ -34,7 +34,7 @@ class PeriodicTableViewController: UIViewController {
         view.addGestureRecognizer(swipeToRight)
     }
     
-    func onRightSwipe(event: Any) {
+    @objc func onRightSwipe(event: Any) {
         let aboutModel = AboutViewModel()
         let aboutViewController = AboutViewController(model: aboutModel)
         self.navigationController?.pushViewController(aboutViewController, animated: true)
@@ -46,7 +46,7 @@ extension PeriodicTableViewController {
     
     func configureTitleView() {
         navigationController?.navigationBar.barTintColor = .black
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationItem.title = "Periodic Table"
     }
  

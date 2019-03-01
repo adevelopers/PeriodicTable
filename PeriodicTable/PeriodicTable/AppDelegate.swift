@@ -13,18 +13,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        UINavigationBar.appearance().backgroundColor = UIColor.black
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         UINavigationBar.appearance().tintColor = .white
-        
-        // отключаем стрелку с кнопки назад и потом поставим свою
         UINavigationBar.appearance().backIndicatorImage = #imageLiteral(resourceName: "button-back")
+        UINavigationBar.appearance().backgroundColor = UIColor.black
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage()
-        
-        
         return true
     }
+    
 
 }

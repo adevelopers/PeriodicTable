@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SnapKit
+//import SnapKit
 
 class ElementDetailViewController: UIViewController {
 
@@ -146,6 +146,7 @@ extension ElementDetailViewController {
     }
 
     fileprivate func setupConstaints() {
+        
         elementImageView.snp.makeConstraints { set in
             set.width.equalTo(100)
             set.height.equalTo(100)

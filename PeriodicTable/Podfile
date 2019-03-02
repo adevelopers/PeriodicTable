@@ -7,7 +7,6 @@ target 'PeriodicTable' do
 
   # Pods for PeriodicTable
   # pod 'RxRealm', '0.6.0'
-  pod 'SnapKit'
   pod 'RxSwift'
   pod 'RxCocoa'
   # pod 'Kingfisher', '3.9.1'

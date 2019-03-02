@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().backIndicatorImage = #imageLiteral(resourceName: "button-back")
         UINavigationBar.appearance().backgroundColor = UIColor.black
-        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage()
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "button-back")
         return true
     }
     

@@ -159,7 +159,7 @@ extension ElementDetailViewController {
         labelNumber.translatesAutoresizingMaskIntoConstraints = false
         labelNumber.widthAnchor.constraint(equalToConstant: 62).isActive = true
         labelNumber.heightAnchor.constraint(equalToConstant: 42).isActive = true
-        labelNumber.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        labelNumber.centerYAnchor.constraint(equalTo: labelSymbol.centerYAnchor).isActive = true
         labelNumber.rightAnchor.constraint(equalTo: labelSymbol.leftAnchor, constant: -10).isActive = true
         
         labelName.translatesAutoresizingMaskIntoConstraints = false

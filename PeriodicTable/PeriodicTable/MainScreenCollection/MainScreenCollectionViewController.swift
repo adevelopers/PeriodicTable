@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MainScreenCollectionViewController: UIViewController {
+    
+    let bag = DisposeBag()
     
     var collectionView: UICollectionView!
     var searchController: UISearchController!
@@ -49,13 +53,13 @@ class MainScreenCollectionViewController: UIViewController {
         collectionView.contentOffset.y += 10
     }
     
-    func onRightSwipe(event: Any) {
+    @objc func onRightSwipe(event: Any) {
         let aboutModel = AboutViewModel()
         let aboutViewController = AboutViewController(model: aboutModel)
         self.navigationController?.pushViewController(aboutViewController, animated: true)
     }
     
-    func onTapToDimm(event: Any) {
+    @objc func onTapToDimm(event: Any) {
         customSearchBar.resignFirstResponder()
     }
     
@@ -63,16 +67,20 @@ class MainScreenCollectionViewController: UIViewController {
 
 extension MainScreenCollectionViewController {
     
+    
     func configureTitleView() {
         navigationController?.navigationBar.barTintColor = .black
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationItem.title = "Periodic Table"
     }
     
     func configureCollectionView() {
         model = PeriodicTableService().getPeriodicTable()
         
-        let offset = (navigationController?.navigationBar.intrinsicContentSize.height ?? 0)  + UIApplication.shared.statusBarFrame.height + 44 + 24
+        let offset = (navigationController?.navigationBar.intrinsicContentSize.height ?? 0)
+            + UIApplication.shared.statusBarFrame.height
+            + 44
+            + 24
         
         let frameCollectionView = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - offset)
         
@@ -84,38 +92,33 @@ extension MainScreenCollectionViewController {
         collectionView.center.y += offset
         view.addSubview(collectionView)
     }
-    
+
     func configureSearchBar() {
-        let offset = (navigationController?.navigationBar.intrinsicContentSize.height ?? 0)  + UIApplication.shared.statusBarFrame.height
+        let offset = (navigationController?.navigationBar.intrinsicContentSize.height ?? 0)
+            + UIApplication.shared.statusBarFrame.height
         customSearchBar = UITextField(frame: CGRect(x: 10, y: 10, width: view.frame.width - 20, height: 44))
         customSearchBar.textColor = .white
         customSearchBar.textAlignment = .center
         customSearchBar.layer.borderColor = UIColor.white.cgColor
         customSearchBar.layer.borderWidth = 1
         customSearchBar.center.y += offset
-        customSearchBar.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged )
-        customSearchBar.delegate = self
         view.addSubview(customSearchBar)
-    }
-    
-    func textFieldDidChange(_ textField: UITextField) {
-        if let count = textField.text?.characters.count, count > 0{
-            model.filterCriteria = textField.text
-        } else {
-            model.filterCriteria = nil
-        }
-        
-        collectionView.reloadData()
-    }
-    
-}
 
-extension MainScreenCollectionViewController: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        customSearchBar.endEditing(true)
-        return false
+        customSearchBar.rx.text
+            .orEmpty
+            .debounce(0.2, scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] query in
+                if query.count > 0 {
+                    self?.model.filterCriteria = query
+                } else {
+                    self?.model.filterCriteria = nil
+                }
+                self?.collectionView.reloadData()
+            })
+            .disposed(by: bag)
     }
+
     
 }
 
@@ -126,7 +129,11 @@ extension MainScreenCollectionViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ElementCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)  as! ElementCollectionViewCell
+        guard
+            let cell: ElementCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)  as? ElementCollectionViewCell
+        else {
+            return UICollectionViewCell()
+        }
         
         cell.backgroundColor = .clear
         if let element = model.element(at: indexPath.row) {
@@ -150,12 +157,10 @@ extension MainScreenCollectionViewController: UICollectionViewDelegate {
     
 }
 
-
-// MARK: Search Bar
 extension MainScreenCollectionViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        if let count = searchController.searchBar.text?.characters.count, count > 0{
+        if let count = searchController.searchBar.text?.count, count > 0{
             model.filterCriteria = searchController.searchBar.text
         }
         else {

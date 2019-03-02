@@ -29,16 +29,22 @@ class AboutViewController: UIViewController {
         configureBackButton()
         configureRadialGradient()
 
-        textView = UITextView(frame: CGRect(x: 0, y: 0, width: size.width, height: view.frame.height))
+        textView = UITextView(frame: .zero)
         view.addSubview(textView)
         textView.text = viewModel?.text ?? ""
         textView.textColor = .white
         textView.isEditable = false
         textView.backgroundColor = .clear
-        textView.textContainerInset = UIEdgeInsetsMake(80, 30, 30, 30)
+        textView.textContainerInset = UIEdgeInsets(top: 80,
+                                                   left: 30,
+                                                   bottom: 30,
+                                                   right: 30)
         textView.font = UIFont(name: "Arial", size: 14)
         textView.alpha = 0.6
+        
+        setupConstrainsts()
     }
+    
     
     fileprivate func configureRadialGradient() {
         view.backgroundColor = .black
@@ -57,5 +63,15 @@ class AboutViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
 
+    func setupConstrainsts() {
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
+        textView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        textView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        textView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        
+    }
+    
 
 }

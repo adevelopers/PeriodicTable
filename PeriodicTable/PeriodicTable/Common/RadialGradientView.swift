@@ -20,7 +20,7 @@ class RadialGradientView: UIView {
             context.drawRadialGradient( gradient, startCenter: center,
                                         startRadius: 0,
                                         endCenter: center,
-                                        endRadius: frame.height/1.5, options: CGGradientDrawingOptions.drawsAfterEndLocation)
+                                        endRadius: frame.height / 1.5, options: CGGradientDrawingOptions.drawsAfterEndLocation)
         }
     }
     

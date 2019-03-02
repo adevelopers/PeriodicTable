@@ -27,11 +27,13 @@ class ElementDetailImageViewController: UIViewController {
         
         if let viewModel = viewModel {
             imageView.image = UIImage(named: viewModel.symbol)
+            imageView.contentMode = .scaleAspectFit
+            imageView.backgroundColor = .black
         }
     }
 
     fileprivate func configureBackButton() {
-        title = "Element Detail Image"
+        title = viewModel?.name
         self.navigationController?.navigationBar.topItem?.titleView?.tintColor = .white
         let backButton = UIBarButtonItem()
         backButton.setTitlePositionAdjustment(UIOffset.zero, for: .compact)

@@ -34,7 +34,7 @@ class PeriodicTableViewController: UIViewController {
         view.addGestureRecognizer(swipeToRight)
     }
     
-    func onRightSwipe(event: Any) {
+    @objc func onRightSwipe(event: Any) {
         let aboutModel = AboutViewModel()
         let aboutViewController = AboutViewController(model: aboutModel)
         self.navigationController?.pushViewController(aboutViewController, animated: true)
@@ -46,7 +46,7 @@ extension PeriodicTableViewController {
     
     func configureTitleView() {
         navigationController?.navigationBar.barTintColor = .black
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationItem.title = "Periodic Table"
     }
  
@@ -114,7 +114,7 @@ extension PeriodicTableViewController: UITableViewDelegate {
 extension PeriodicTableViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        if let count = searchController.searchBar.text?.characters.count, count > 0{
+        if let count = searchController.searchBar.text?.count, count > 0{
             model.filterCriteria = searchController.searchBar.text
         }
         else {

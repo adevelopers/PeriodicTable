@@ -7,29 +7,20 @@
 //
 
 import UIKit
-import Bugsee
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        UINavigationBar.appearance().backgroundColor = UIColor.black
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         UINavigationBar.appearance().tintColor = .white
-        
-        // отключаем стрелку с кнопки назад и потом поставим свою
         UINavigationBar.appearance().backIndicatorImage = #imageLiteral(resourceName: "button-back")
-        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage()
-        
-        if let path = Bundle.main.resourcePath {
-            print(path  + "/images/")
-        }
-        
-        Bugsee.launch(token :"13545456-68eb-43c2-b564-bfdeb167d37a")
-        
+        UINavigationBar.appearance().backgroundColor = UIColor.black
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "button-back")
         return true
     }
+    
 
 }

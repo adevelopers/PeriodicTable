@@ -27,7 +27,7 @@ class PeriodicTableModel {
             return list.filter { $0.number == number }
         }
         
-        if filterCriteria.characters.count > 2 {
+        if filterCriteria.count > 2 {
             return list.filter { $0.name.lowercased().contains(filterCriteria.lowercased()) }
         }
         

@@ -1,5 +1,5 @@
 # PeriodicTable App
-### Periodic Table -  приложение по мотивам таблицы Менделеева
+### Periodic Table - application based on Mendeleyev's table
 
 <img src="PeriodicTableScreen1.png" width="300">
 
